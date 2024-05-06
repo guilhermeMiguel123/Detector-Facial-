@@ -15,33 +15,3 @@ Este é um simples script em Python que utiliza a biblioteca OpenCV junto com o 
 2. Execute o script `face_detection.py`.
 3. Uma janela de visualização será aberta mostrando o vídeo capturado pela sua webcam com os rostos detectados destacados.
 
-## Explicação do Código
-
-1. Importe as bibliotecas necessárias:
-
-   ```python
-   import cv2
-   from cvzone.FaceDetectionModule import FaceDetector
-
-video = cv2.VideoCapture(0)
-
-
-detector = FaceDetector()
-
-
-while True:
-    _, img = video.read()
-
-
-    img, bboxes = detector.findFaces(img, draw=True)
-
-
-    cv2.imshow('Resultado', img)
-
-        if cv2.waitKey(1) == 27:
-        break
-    if cv2.waitKey(1) == 27:
-        break
-
-
-
